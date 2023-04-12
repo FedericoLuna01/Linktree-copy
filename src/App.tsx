@@ -6,8 +6,7 @@ import { LinkBox } from "./components/LinkBox"
 
 
 async function fetchLinks() {
-  const VITE_GOOGLE_SHEETS = import.meta.env.VITE_GOOGLE_SHEETS
-  const res = await fetch(VITE_GOOGLE_SHEETS)
+  const res = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTy6n5lczW53Zw1FVNcT-lMzByw9cds_doNpVthaV4TB7qNKA0BQXuOVzSRjHkVFXkA-vPSz2hGOy4g/pub?output=csv')
   const data = await res.text()
   const parsed = await new Promise<Link[]>((resolve, reject) => {
     Papa.parse<Link>(data, { 
