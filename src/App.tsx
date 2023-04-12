@@ -6,7 +6,7 @@ import { LinkBox } from "./components/LinkBox"
 
 
 async function fetchLinks() {
-  const {VITE_GOOGLE_SHEETS} = import.meta.env
+  const VITE_GOOGLE_SHEETS = import.meta.env.VITE_GOOGLE_SHEETS
   const res = await fetch(VITE_GOOGLE_SHEETS)
   const data = await res.text()
   const parsed = await new Promise<Link[]>((resolve, reject) => {
