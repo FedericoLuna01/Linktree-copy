@@ -1,8 +1,9 @@
-import { Heading, Spinner, Stack } from "@chakra-ui/react"
+import { Heading, Spinner, Stack, Text } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import Papa from 'papaparse'
 import { type Link } from './types/types'
 import { LinkBox } from "./components/LinkBox"
+import Avatar from "./components/Avatar"
 
 
 async function fetchLinks() {
@@ -37,14 +38,21 @@ const App = () => {
       color='white'
       align='center'
       justify='center'
-      gap={8}
+      gap={3}
     >
-      <Stack>
+      <Stack
+        gap={3}
+        align='center'
+      >
+        <Avatar />
         <Heading
           size='2xl'
-        >
+          >
           Federico Luna
         </Heading>
+        <Text>
+          Podes encontrarme en todas estas redes sociales.
+        </Text>
       </Stack>
       <Stack
         bg='#4f4f4f44'
