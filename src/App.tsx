@@ -33,12 +33,14 @@ const App = () => {
   
   return (
     <Stack
-      h='100vh'
+      minH='100vh'
       bg='black'
       color='white'
       align='center'
       justify='center'
       gap={3}
+      py={10}
+      px={{base: 5, sm: 0}}
     >
       <Stack
         gap={3}
@@ -50,7 +52,10 @@ const App = () => {
           >
           Federico Luna
         </Heading>
-        <Text>
+        <Text
+          align='center'
+
+        >
           Podes encontrarme en todas estas redes sociales.
         </Text>
       </Stack>
